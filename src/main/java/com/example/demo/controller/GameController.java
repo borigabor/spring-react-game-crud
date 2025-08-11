@@ -26,7 +26,7 @@ public class GameController {
     }
 
     @GetMapping("/{id}")
-    public Game getGame(@PathVariable UUID id) {
+    public Game getGame(@PathVariable String id) {
         return gameService.findBiId(id);
     }
 
@@ -41,7 +41,7 @@ public class GameController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteGameById(@PathVariable UUID id) {
+    public void deleteGameById(@PathVariable String id) {
         gameService.deleteById(id);
     }
 

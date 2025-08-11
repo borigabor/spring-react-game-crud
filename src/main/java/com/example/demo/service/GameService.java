@@ -32,7 +32,7 @@ public class GameService {
         return gameRepositroy.save(game);
     }
 
-    public Game findBiId(UUID id) {
+    public Game findBiId(String id) {
         Optional<Game> optionalGame = gameRepositroy.findById(id);
         if (optionalGame.isPresent()) {
             return optionalGame.get();
@@ -41,7 +41,7 @@ public class GameService {
         }
     }
 
-    public void deleteById(UUID id) {
+    public void deleteById(String id) {
         gameRepositroy.deleteById(id);
     }
 
